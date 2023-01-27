@@ -1,0 +1,98 @@
+[
+  {
+    "bin_id": "bin01",
+    "request_id": "req01-bin01",
+    "data": {
+      "method": "POST",
+      "path": "/webhook/bin01",
+      "query": {},
+      "url": "https://eozbs4r8idf0cev.m.pipedream.net/",
+      "headers": {
+        "host": "eozbs4r8idf0cev.m.pipedream.net",
+        "content-length": "2827",
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate",
+        "user-agent": "Basecamp3 Webhook",
+        "content-type": "application/json",
+        "x-request-id": "d188b8e4-db17-487f-8ee6-fcc02d6b418c"
+      },
+      "body": {
+        "id": 9101427011,
+        "kind": "todo_created",
+        "details": { "notified_recipient_ids": [] },
+        "created_at": "2023-01-24T08:53:36.858-08:00",
+        "recording": {
+          "id": 5762249342,
+          "status": "active",
+          "visible_to_clients": false,
+          "created_at": "2023-01-24T08:53:36.843-08:00",
+          "updated_at": "2023-01-24T08:53:36.863-08:00",
+          "title": "Webhook test again",
+          "bucket": {
+            "id": 30237488,
+            "name": "2301 - Team 1",
+            "type": "Project"
+          },
+          "creator": {
+            "id": 41703837,
+            "attachable_sgid": "BAh7CEkiCGdpZAY6BkVUSSIpZ2lkOi8vYmMzL1BlcnNvbi80MTcwMzgzNz9leHBpcmVzX2luBjsAVEkiDHB1cnBvc2UGOwBUSSIPYXR0YWNoYWJsZQY7AFRJIg9leHBpcmVzX2F0BjsAVDA=--8665291fa2d29d61521ac2ce893be1e627fe4471",
+            "name": "Jason Wang"
+          },
+          "content": "Webhook test again"
+        },
+        "creator": {
+          "id": 41703837,
+          "name": "Jason Wang"
+        }
+      }
+    }
+  },
+  {
+    "bin_id": "bin01",
+    "request_id": "req02-bin01",
+    "data": {
+      "method": "GET",
+      "path": "/webhook/bin01",
+      "query": {},
+      "url": "https://eozbs4r8idf0cev.m.pipedream.net/",
+      "headers": {
+        "Request URL": "https://cf2c-108-60-51-226.ngrok.io",
+        "Request method": "POST",
+        "Accept": "*/*",
+        "content-type": "application/json",
+        "User-Agent": "GitHub-Hookshot/b591633",
+        "X-GitHub-Delivery": "6c144b50-99a1-11ed-98b4-45879f392a62",
+        "X-GitHub-Event": "push"
+      },
+      "body": {
+        "repository": {
+          "full_name": "ls-jre/webhook-generator",
+          "html_url": "https://github.com/ls-jre/webhook-generator",
+          "created_at": 1674315023,
+          "updated_at": "2023-01-21T15:30:23Z",
+          "pushed_at": 1674315409
+        },
+        "pusher": {
+          "name": "jasonherngwang",
+          "email": "jasonherngwang@gmail.com"
+        },
+        "commits": [
+          {
+            "id": "0a8c001f42858095f22341725a27e176928173ea",
+            "message": "feat: add readme",
+            "timestamp": "2023-01-21T07:36:47-08:00",
+            "url": "https://github.com/ls-jre/webhook-generator/commit/0a8c001f42858095f22341725a27e176928173ea",
+            "author": {
+              "name": "Jason Wang",
+              "email": "jasonherngwang@gmail.com",
+              "username": "jasonherngwang"
+            },
+            "added": ["README.md"],
+            "removed": [],
+            "modified": []
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,1 @@
+scp ./backend/ecosystem.config.js root@134.122.113.129:~/jaguar-bin/backend
