@@ -74,4 +74,11 @@ const addRequest = async (binId: string, req: Request) => {
   return { request };
 };
 
-export default { addRequest };
+const clearRequests = async () => {
+  const query = 'DELETE FROM requests';
+  await pgPool.query(query);
+  await RequestModel.deleteMany({});
+  console.log('requests cleared');
+};
+
+export default { addRequest, clearRequests };
