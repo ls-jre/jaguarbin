@@ -7,7 +7,7 @@ export VISUAL=nano
 export EDITOR=nano
 
 # Add new cron job
-echo "*/2 * * * * cd $SCRIPT_DIR && sh ./cleanup_requests.sh" > cleanup_requests_cron
+echo "*/20 * * * * cd $SCRIPT_DIR && sh ./cleanup_requests.sh" > cleanup_requests_cron
 
 # Install new cron file
 crontab cleanup_requests_cron
