@@ -31,7 +31,7 @@ server.listen(config.PORT, () => {
     .then(() => {
       console.log('Connected to MongoDB');
     })
-    .then(() => seedDB()) // pass true if you want to guarantee
+    .then(() => seedDB(true)) // pass true if you want to guarantee
     .catch((error) => {
       console.error('Error connecting to MongoDB:', error.message);
     });

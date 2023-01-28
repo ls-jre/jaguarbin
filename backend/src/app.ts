@@ -10,7 +10,7 @@ app.use(cors());
 async function storeRequest(req: Request, binId: string) {
   const { request } = await requestsService.addRequest(binId, req);
   console.log('request added: ', request);
-  return request
+  return request;
 }
 
 function emitRequest(request: any, binId: string) {
@@ -44,20 +44,33 @@ app.put('/bins/:binId', async (req: Request, res: Response) => {
 });
 
 // Post a webhook
-app.post(['/webhooks/:binId', '/webhooks/:binId/*'], async (req: Request, res: Response) => {
-  const { binId } = req.params;
-  const request = await storeRequest(req, binId);
-  emitRequest(request, binId)
+app.post(
+  ['/webhooks/:binId', '/webhooks/:binId/*'],
+  async (req: Request, res: Response) => {
+    const { binId } = req.params;
+    const request = await storeRequest(req, binId);
+    emitRequest(request, binId);
 
-  return res.status(200).send();
-});
+    return res.status(200).send();
+  }
+);
 
 // Get a webhook
-app.get(['/webhooks/:binId', '/webhooks/:binId/*'], async (req: Request, res: Response) => {
-  const { binId } = req.params;
-  const request = await storeRequest(req, binId);
-  emitRequest(request, binId)
+app.get(
+  ['/webhooks/:binId', '/webhooks/:binId/*'],
+  async (req: Request, res: Response) => {
+    const { binId } = req.params;
+    const request = await storeRequest(req, binId);
+    emitRequest(request, binId);
 
+    return res.status(200).send();
+  }
+);
+
+// Clear requests
+// TODO: Make this a separate process, or disallow route
+app.post('/cleanup', async (_: Request, res: Response) => {
+  await requestsService.clearRequests();
   return res.status(200).send();
 });
 
